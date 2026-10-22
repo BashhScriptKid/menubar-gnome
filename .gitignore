@@ -1,0 +1,4 @@
+# devkit logs and screenshots
+devkit/*.log
+*.png
+.codebase-memory/

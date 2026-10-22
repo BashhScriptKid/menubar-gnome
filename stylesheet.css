@@ -1,0 +1,57 @@
+/* stylesheet for the menu bar */
+
+.menubar {
+    spacing: 0;
+    padding: 0 2px;
+}
+
+.menubar-title {
+    font-weight: bold;
+    padding: 0 8px 0 4px;
+    color: inherit;
+}
+
+/* The titles in the bar.
+ *
+ * Nothing sets a font weight for the panel's buttons, so the labels
+ * inherit it from the panel and end up heavy.  Inheritance always loses
+ * against an explicit rule, so set it on the button and on the label in it.
+ */
+#panel .menubar-item,
+#panel .menubar-item StLabel {
+    font-weight: normal;
+}
+
+#panel .menubar-item {
+    padding: 0 8px;
+    color: inherit;
+}
+
+/* No hover/active colours here on purpose: our items are PanelMenu.Buttons,
+   so they carry the panel's own `panel-button` style and the theme's states
+   (:hover, :active, :focus) apply to them exactly as they do to the
+   panel's own buttons.  Overriding them here would make our items look
+   different from the rest of the bar. */
+
+/* the clock, moved from the centre to the right corner: close the padding of
+   the component inside the button, so it sits next to the other indicators */
+.menubar-clock .clock-display-box {
+    spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menubar-clock .clock {
+    padding: 0;
+    margin: 0;
+}
+
+/* the menu of a menu bar item: the theme's popup menus carry a 12px
+   horizontal margin, which pushes the panel away from the item it belongs
+   to.  The margin goes, the rounded corners stay (a little tighter than
+   the theme's 14px, so the corner does not float above the item). */
+.menubar-menu {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 8px;
+}

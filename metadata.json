@@ -1,0 +1,8 @@
+{
+    "uuid": "menubar@local",
+    "name": "Menu Bar",
+    "description": "macOS-style global menu bar for GNOME. Reads menus from com.canonical.dbusmenu, org.gtk.Actions and AT-SPI.",
+    "shell-version": ["45", "46", "47", "48", "49", "50"],
+    "session-modes": ["user"],
+    "url": "https://local"
+}
